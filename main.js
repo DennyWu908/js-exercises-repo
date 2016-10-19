@@ -26,9 +26,9 @@ document.getElementById("q1").classList.add("status-good");
 //    how well you feel about this course material. 
 //    Then display that string within the HTML page. 
 
+var feelings = "uneasy, but interested.";
 
-
-
+document.getElementById("q2").innerHTML = feelings;
 
 
 
@@ -38,60 +38,95 @@ document.getElementById("q1").classList.add("status-good");
 //    concat the message and name variables
 //    and then display it within the HTML page.
 
+var name = "Denny Wu.";
 
+var message = "Hello, my name is ";
 
+var complete = message + name;
 
-
-
+document.getElementById("q3").innerHTML = complete;
 
 // 4. Declare two variables with number values.
 //    Add, subtract, multiply and divide them.
 //    Display the values of each within the HTML page.
 //    Then label these values the best you can. 
 
+var x = 3;
 
+var y = 5;
 
+var add = x + y;
 
+var minus = x - y;
 
+var multiply = x * y;
 
+var divide = x / y;
+
+document.getElementById("q4e").innerHTML = x;
+document.getElementById("q4f").innerHTML = y;
+
+document.getElementById("q4a").innerHTML = add;
+document.getElementById("q4b").innerHTML = minus;
+document.getElementById("q4c").innerHTML = multiply;
+document.getElementById("q4d").innerHTML = divide;
 
 // 5. Declare two variables with string values.
 //    Create a third variable that concatenates the two strings
 //    that also places the appropriate space between the strings.
 //    Display the value of the third variable within the HTML page.
 
+var part1 = "She sell seashells";
 
+var part2 = "by the seashore";
 
+var parts = part1 + " " + part2;
 
-
-
+document.getElementById("q5").innerHTML = parts;
 
 // 6. Add, subract, multiply and divide the strings '5' and '3'.
 //    Observe the results and brieftly explain the results within the HTML page.
 
+var x = "5";
 
+var y = "3";
 
+var add = x + y;
 
+var minus = x - y;
 
+var multiply = x * y;
 
+var divide = x / y;
 
+var explain = "Rather than adding 5 and 3 as if they were numbers, the addition operator concatonated them. The other operators worked normally and treated them as numbers.";
+
+document.getElementById("q6a").innerHTML = add;
+document.getElementById("q6b").innerHTML = minus;
+document.getElementById("q6c").innerHTML = multiply;
+document.getElementById("q6d").innerHTML = divide;
+
+document.getElementById("q6note").innerHTML = explain;
 
 // 7. When a button is clicked, add content into the ID "q7". 
 
-
-
-
-
+document.getElementById("callAlert").addEventListener("click", function() {
+  document.getElementById("q7").innerHTML = "Alert! Alert! This is not a drill!";
+});
 
 
 // 8. Collect a number value from the user and when a button is clicked, 
 //    then double user's answer and display that value into the HTML page.
 
+//var inputted = document.getElementById("doubleNum").value;
 
+//var doubled = inputted * 2;
 
-
-
-
+document.getElementById("callDoubleNum").addEventListener("click", function() {
+	var inputted = document.getElementById("doubleNum").value;
+	var doubled = inputted * 2;
+  document.getElementById("q8").innerHTML = doubled;
+});
 
 // 9. Set the variable 'num1' to 5.
 //    Set the variable 'num2' to 10.
