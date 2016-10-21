@@ -134,11 +134,15 @@ document.getElementById("callDoubleNum").addEventListener("click", function() {
 //    If so, output to the HTML page: Yes, the value of num1 is greater than num2
 //    If not, output to the HTML page: No, the value of num1 is not greater than num2
 
+var num1 = 5;
 
+var num2 = 10;
 
-
-
-
+if (num1 > num2) {
+	document.getElementById("q9").innerHTML = "Yes, the value of num1 is greater than num2.";
+} else {
+	document.getElementById("q9").innerHTML = "No, the value of num1 is not greater than num2.";
+};
 
 // 10. Set the variable 'score' to a number between 1-100. 
 //    Create the following conditions:
@@ -147,9 +151,17 @@ document.getElementById("callDoubleNum").addEventListener("click", function() {
 //    If the score is below 59, output to the HTML page "Very bad: study more and retake the test".
 //    Test to make sure each condition is met properly. 
 
+var score = Math.floor((Math.random() * 100) + 1);
 
+document.getElementById("message").innerHTML = score;
 
-
+if (score > 90) {
+	document.getElementById("q10").innerHTML = "Great job.";
+} else if (score > 60 && score < 90) {
+	document.getElementById("q10").innerHTML = "Nice work, keep practicing.";
+} else {
+	document.getElementById("q10").innerHTML = "Very bad: study more and retake the test.";
+}
 
 
 
@@ -159,9 +171,12 @@ document.getElementById("callDoubleNum").addEventListener("click", function() {
 //    In a single command, take the user's answers and display into the HTML page the sentence:
 //   "My name is __. I'm __ years old, and I live in __."
 
-
-
-
+document.getElementById("submitInfo").addEventListener("click", function() {
+	var name = document.getElementById("personName").value;
+	var age = document.getElementById("personAge").value;
+	var city = document.getElementById("personCity").value;
+  document.getElementById("qa").innerHTML = "My name is " + name + ". " + "I'm " + age + " years old, and I live in " + city + ".";
+});
 
 
 // B. Create the formula to determine the area of a rectangle.
